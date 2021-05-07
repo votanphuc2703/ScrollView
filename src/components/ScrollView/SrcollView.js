@@ -7,7 +7,7 @@ export default class SrcollView extends Component {
 
     ShowItem = () => {
         return this.arrayItem.map(item => {
-            return <View style={[styles.Item,{backgroundColor:`#${Math.floor(Math.random() * 999)}`}]}>
+            return <View key={item} style={[styles.Item,{backgroundColor:`#${Math.floor(Math.random()*16777215).toString(16)}`}]}>
                 <Text style={styles.Text}> Item {item} </Text>
             </View>
         })  
